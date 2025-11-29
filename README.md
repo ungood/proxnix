@@ -1,6 +1,6 @@
 # proxnix
 
-Nix modules for configuring Proxmox homelabs.
+An experiment in nixify-ing my proxmox home lab.
 
 ## Goals
 
@@ -16,9 +16,8 @@ Create a set of Nix modules that enable declarative configuration and management
 
 Create a NixOS configuration that can run Proxmox:
 
-- Define a NixOS module for Proxmox VE
+- Define a NixOS configuration using proxmox-nixos
 - Stand up a temporary test node to validate the configuration
-- Document any manual steps required
 
 ### 2. Nix Binary Cache Container Module
 
@@ -32,7 +31,6 @@ Create a Nix module that deploys an LXC container running a simple Nix binary ca
 Create a method for automatically updating Nix-managed hosts:
 
 - Scheduled or triggered rebuilds
-- Safe rollback capability
 
 ### 4. Migrate Existing Proxmox Node
 
@@ -62,7 +60,5 @@ Where possible, contributions should be upstreamed to existing open source proje
 - [Proxmox VE Documentation](https://pve.proxmox.com/pve-docs/)
 - [Proxmox VE API](https://pve.proxmox.com/pve-docs/api-viewer/)
 - [NixOS Manual](https://nixos.org/manual/nixos/stable/)
-- [NixOS on Proxmox](https://nixos.wiki/wiki/Proxmox_Virtual_Environment)
-- [nix-serve](https://github.com/edolstra/nix-serve) - Simple Nix binary cache server
-- [Attic](https://github.com/zhaofengli/attic) - Multi-tenant Nix binary cache
+- [proxmox-nixos](https://github.com/SaumonNet/proxmox-nixos)
 - [Proxmox NixOS Container Guide](https://nixos.wiki/wiki/Proxmox_Linux_Container)
