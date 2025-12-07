@@ -19,20 +19,12 @@ Create a NixOS configuration that can run Proxmox:
 - Define a NixOS configuration using proxmox-nixos
 - Stand up a temporary test node to validate the configuration
 
-### 2. Nix Binary Cache Container Module
+### 2. Nix Github Runner
 
-Create a Nix module that deploys an LXC container running a simple Nix binary cache:
+Create a Nix module that creates a LXC container that can be used as a Github Private Runner. See [github-nix-ci](https://github.com/juspay/github-nix-ci)
+This is useful to me because my current nix-config repository cannot be built on a standard Github runner (it takes more than the provided 14 Gb of space).
 
-- Declarative configuration for the cache service
-- Support for updates via the module
-
-### 3. Automatic Host Updates
-
-Create a method for automatically updating Nix-managed hosts:
-
-- Scheduled or triggered rebuilds
-
-### 4. Migrate Existing Proxmox Node
+### 3. Migrate Existing Proxmox Node
 
 Safely migrate the existing Proxmox node to NixOS without data loss:
 
@@ -40,6 +32,14 @@ Safely migrate the existing Proxmox node to NixOS without data loss:
 - Reformat the original node with NixOS + Proxmox
 - Migrate containers back
 - Tear down temporary node
+
+## Later Milestones
+
+### Automatic Host Updates
+
+Create a method for automatically updating Nix-managed hosts:
+
+- Scheduled or triggered rebuilds
 
 ## Contributing
 
@@ -62,3 +62,4 @@ Where possible, contributions should be upstreamed to existing open source proje
 - [NixOS Manual](https://nixos.org/manual/nixos/stable/)
 - [proxmox-nixos](https://github.com/SaumonNet/proxmox-nixos)
 - [Proxmox NixOS Container Guide](https://nixos.wiki/wiki/Proxmox_Linux_Container)
+- [Github Nix CI](https://github.com/juspay/github-nix-ci)
